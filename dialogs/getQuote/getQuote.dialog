@@ -1,0 +1,75 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "5MdLzy",
+    "name": "getQuote",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "HkE7BK"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "PFV2Ca"
+          },
+          "activity": "${SendActivity_PFV2Ca()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "ldMRNM"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_ldMRNM()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.ticker"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "LAN5CX"
+          },
+          "activity": "${SendActivity_LAN5CX()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "b89HAA"
+          },
+          "method": "GET",
+          "url": "https://twelve-data1.p.rapidapi.com/price?symbol=${dialog.ticker}&outputsize=30&format=json\"",
+          "responseType": "json",
+          "headers": {
+            "x-rapidapi-key": "def66e2ad7msh812217da7d5b03fp19e120jsnd95c93d205bb",
+            "x-rapidapi-host": "twelve-data1.p.rapidapi.com"
+          },
+          "resultProperty": "dialog.api_response"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ixz1Gc"
+          },
+          "activity": "${SendActivity_ixz1Gc()}"
+        }
+      ]
+    }
+  ],
+  "generator": "getQuote.lg",
+  "recognizer": "getQuote.lu.qna",
+  "id": "getQuote"
+}

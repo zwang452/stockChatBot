@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_stockChatBot",
+  "recognizers": {
+    "en-us": "stockChatBot.en-us.lu",
+    "": "stockChatBot.en-us.lu"
+  }
+}

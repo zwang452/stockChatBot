@@ -1,0 +1,10 @@
+{
+  "stockChatBot.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "Quote": [
+        "getQuote.en-us"
+      ]
+    }
+  }
+}

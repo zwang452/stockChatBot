@@ -1,0 +1,10 @@
+[import](common.lg)
+
+# SendActivity_PFV2Ca()
+- Let's get you updated!
+# TextInput_Prompt_ldMRNM()
+- Please enter the ticker of the company!
+# SendActivity_LAN5CX()
+- Okay, let's see how ${dialog.ticker} is doing!
+# SendActivity_ixz1Gc()
+- Company AMAZON, ticker AMZN's real time price is ${dialog.api_response.content.price} USD

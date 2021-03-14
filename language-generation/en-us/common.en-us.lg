@@ -1,0 +1,3 @@
+# WelcomeUser
+- Welcome to Stock Bot, user ${turn.Activity.Recipient.id}!
+- Nice to see you, what can I do for you today? 
